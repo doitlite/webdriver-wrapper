@@ -1,3 +1,7 @@
+.idea
+target/
+anyclip-webdriver.iml
+
 # Compiled class file
 *.class
 
@@ -10,7 +14,7 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
+# Package Files 
 *.jar
 *.war
 *.ear
