@@ -18,10 +18,8 @@ public class FirefoxDriverCapabilities extends CommonDriverCapabilities {
     }
 
     public DesiredCapabilities defaultCapabilities(){
-        FirefoxDriverCapabilities firefoxDriverCapabilities = new FirefoxDriverCapabilities();
-
-        firefoxDriverCapabilities.setDriverLogger(LogType.BROWSER, Level.INFO);
-        return firefoxDriverCapabilities.getCapabilities();
+        setDriverLogger(LogType.BROWSER, Level.INFO);
+        return getCapabilities();
     }
 
 

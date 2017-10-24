@@ -4,8 +4,12 @@ import net.lightbody.bmp.BrowserMobProxy;
 import net.lightbody.bmp.BrowserMobProxyServer;
 import net.lightbody.bmp.client.ClientUtil;
 import org.openqa.selenium.Proxy;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class ProxyWrapper {
+
+    public static final Logger logger = LoggerFactory.getLogger(ProxyWrapper.class);
     private BrowserMobProxy proxy;
     private int proxyPort = 4444;
 
@@ -22,10 +26,12 @@ public class ProxyWrapper {
     }
 
     public void startProxy(){
+        logger.info("Starting proxy");
         proxy.start(proxyPort);
     }
 
     public void stopProxy(){
+        logger.info("Stopping proxy");
         if (proxy != null && ! ((BrowserMobProxyServer) proxy).isStopped()) {
             proxy.stop();
         }

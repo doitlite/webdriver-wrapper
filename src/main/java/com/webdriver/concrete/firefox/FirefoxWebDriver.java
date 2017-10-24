@@ -14,7 +14,6 @@ public class FirefoxWebDriver extends WebDriverWrapper {
         super.proxyWrapper = new ProxyWrapper();
         proxyWrapper.startProxy();
         capabilities.setProxy(proxyWrapper.getSeleniumProxy());
-
         super.wd = new FirefoxDriver(capabilities.getCapabilities());
     }
 

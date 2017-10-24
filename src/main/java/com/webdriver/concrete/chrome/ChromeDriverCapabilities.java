@@ -23,7 +23,6 @@ public class ChromeDriverCapabilities extends CommonDriverCapabilities{
     }
 
     public void defaultCapabilities() {
-//        ChromeDriverCapabilities chromeDriverCapabilities = new ChromeDriverCapabilities();
 
         setExperimentalOptions(Arrays.asList(
                 ChromeDriverExperimentalOptions.DISABLE_CREDENTIALS_SERVICE,
